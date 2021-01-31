@@ -15,18 +15,20 @@
             
             #wrap {
                 width: 100%;
-                height: 100%;
+                height: 400%;
                 display: flex;
                 flex-direction: column;
             }
             
             .page {
-                width: 100%;
-                height: 100%;
+                min-width: 700px;
+                min-height: 850px;
             }
             
             /* main page */
             #main-page {
+                width: 100%;
+                height: 100%;
                 background-image: url('background.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -150,21 +152,272 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-            
-            #mCSB_1_container {
-                width: 100%;
-                height: 500%;
-            }
             /* main page */
+            
+            /* splash */
+            #preloader {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                z-index: 99999;
+                background-color: white;
+            }
+            
+            .item {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            /* splash */
+            
+            /* about us */            
+            nav {
+                width: 100%;
+                height: 60px;
+                background: white;
+                box-sizing: border-box;
+                border-bottom: 1px solid #efefef;
+                z-index: 99;
+            }
+            
+            #nav-content {
+                width: 900px;
+                height: 60px;
+                line-height: 60px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            #nav-content > h3 {
+                width: 100px;
+                font-weight: 600;
+                font-size: 24px;
+            }
+            
+            #nav-content > ul {
+                width: auto;
+                list-style: none;
+            }
+            
+            #nav-content > ul > li {
+                float: left;
+                width: auto;
+                margin-left: 16px;
+                margin-right: 16px;
+            }
+            
+            #nav-content > ul > li:hover {
+                cursor: pointer;
+            }
+            
+            #about-page {
+                text-align: center;
+                box-sizing: border-box;
+            }
+            
+            #about-us, #portfolio, #contact {
+                width: 900px;
+                height: auto;
+                margin: 0 auto;
+            }
+            
+            #about-us > h1, #portfolio > h1, #contact > h1 {
+                margin-top: 120px;
+                font-weight: 500;
+                font-size: 40px;
+                height: 70px;
+            }
+            
+            #about-us > .underline, #portfolio > .underline, #contact > .underline {
+                background: black !important;
+            }
+            
+            #about-us > p, #portfolio > p, #contact > p {
+                color: gray;
+                height: 150px;
+            }
+            
+            #table-1 {
+                width: 100%;
+                height: 450px;
+                flex-direction: row;
+                margin-top: 120px;
+                display: flex;
+            }
+            
+            .card {
+                text-align: center;
+                display: none;
+            }
+            
+            .card-image {
+                width: 100px;
+                height: 100px;
+                border: 2px solid #efefef;
+                border-radius: 50%;
+                margin: 0 auto;
+                transition: border 1s;
+                cursor: pointer;
+            }
+            
+            .card-image:hover {
+                
+                border: 2px solid #ada074;
+            }
+            
+            .card:nth-child(1) > .card-image { background: url('motto.png') white no-repeat center center; }
+            .card:nth-child(2) > .card-image { background: url('publisher.png') white no-repeat center center; }
+            .card:nth-child(3) > .card-image { background: url('designer.png') white no-repeat center center; }
+            
+            .card > h2 {
+                font-weight: 500;
+                height: 60px;
+                margin-top: 16px;
+            }
+            
+            .card > p {
+                height: auto;
+                color: gray;
+            }
+            /* about us */
+            
+            /* portfolio */
+            #portfolio-page {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                background-color: #efefef;
+            }
+            
+            #portfolio > p {
+                height: 120px;
+            }
+            
+            .portfolio-table {
+                width: 750px;
+                height: 220px;
+                margin: 0 auto;
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row wrap;
+            }
+            
+            .portfolio-card {
+                width: 180px;
+                height: 220px;
+                margin-bottom: 10px;
+                position: relative;
+                display: none;
+            }
+            
+            .portfolio-card:nth-child(1), .portfolio-card:nth-child(2), .portfolio-card:nth-child(3) {
+                margin-right: 10px;
+            }
+            
+            .portfolio-card-opacity {
+                color: white;
+                background: #ada074;
+                line-height: 90px;
+                opacity: 0;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                transition: opacity 1s;
+            }
+            
+            .portfolio-card:hover .portfolio-card-opacity {
+                opacity: 1;
+            }
+            
+            .portfolio-card-opacity p {
+                height: auto;
+            }
+            
+            .portfolio-card-image {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background: url('http://placehold.it/180x220') white no-repeat center center;
+            }
+            /* portfolio */
+            
+            /* contact-page */
+            #contact-page {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+            
+            #contact > p {
+                width: 300px;
+                font-size: 15px;
+                text-align: left;
+                margin-left: 330px;
+            }
+            
+            #send-box {
+                width: 500px;
+                margin: 0 auto;
+            }
+            
+            #send-box > p {
+                text-align: left;
+                margin-bottom: 8px;
+                margin-top: 16px;
+            }
+            
+            #send-box > input {
+                display: inline-block;
+                height: 35px;
+                padding: 5px;
+                border: 0;
+                outline: 0;
+                border-top: 1px solid black;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: rgb(240, 240, 240);
+            }
+            
+            textarea {
+                resize: none;
+                padding: 5px;
+            }
+            
+            button {
+                width: 150px;
+                height: 50px;
+                margin-top: 16px;
+                background: white;
+                outline: 0;
+                border: 1px solid gray;
+                border-radius: 5px;
+                transition: all 1s;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                border: 1px solid #ada074;
+                background: #ada074;
+                color: white;
+            }
+            /* contact-page */
         </style>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script  src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.js"></script>
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css">
     </head>
     
     <body>
-        <div class="mCustomScrollbar" data-mcs-theme="minimal-dark">
+           <div class="preloader" id="preloader">
+               <div class="item">
+                   <img src="images/loading.gif">
+               </div>
+            </div>
+           
             <div id="wrap">
                 <div id="main-page" class="page">
                     <div id="opacity-div"></div>
@@ -184,20 +437,184 @@
                             </div>
                         </div>
 
-                        <div id="main-page-underarrow">
+                        <div id="main-page-underarrow"></div>
+                    </div>
+                </div>
+                
+               
+                <div id="about-page" class="page">
+                    <nav>
+                        <div id="nav-content">
+                            <h3>Kang</h3>
+
+                            <ul>
+                               <li>HOME</li>
+                               <li>ABOUT US</li>
+                               <li>PORTFOLIO</li>
+                               <li>CONTACT</li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div id="about-us">
+                        <h1>ABOUT US</h1>
+                        <div class="underline"></div>
+
+                        <p>
+                            강 재민(Male)
+                            <br>
+                            1995.12.12(+)
+                            <br>
+                            (Mobile) 010-xxxx-xxxx
+                            <br>
+                            _________@naver.com
+                        </p>
+
+                        <div id="table-1">
+                            <div class="card">
+                                <div class="card-image"></div>
+                                <h2>MOTTO</h2>
+                                <p>내용</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-image"></div>
+                                <h2>PUBLISHER</h2>
+                                <p>HTML5, CSS3, JQUERY, SCRIPT, CROSS BROWSING, MEDIA QUERIES(반응형)
+웹표준 및 웹접근성 전문가' 입니다. 'Semantic Markup'을 할 수 사람이 웹 퍼블리셔입니다. 웹에서 모든 사람을 평등하게 고려할 줄 아는(접근성,장차법) 사람이 웹 퍼블리셔 입니다.</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-image"></div>
+                                <h2>Back-end Developer</h2>
+                                <p>내용</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                
+                <div id="portfolio-page" class="page">
+                    <div id="portfolio">
+                        <h1>PORTFOLIO</h1>
+                        <div class="underline"></div>
 
-                <div class="page"></div>
-                <div class="page">3</div>
-                <div class="page">4</div>
-                <div class="page">5</div>
+                        <p>
+                            ※ 자세한 내용은 아래 링크에서 확인해주세요. ※
+                            <br>
+                            <a href="https://github.com/kjae0401?tab=repositories" target="_blank">바로 이동</a>
+                        </p>
+
+                        <div class="portfolio-table">
+                            <div class="portfolio-card">
+                                <div class="portfolio-card-opacity">
+                                    <p>프로젝트</p>
+                                    <p>2021.01.01</p>
+                                </div>
+                                <div class="portfolio-card-image"></div>
+                            </div>
+
+                            <div class="portfolio-card">
+                                <div class="portfolio-card-opacity">
+                                    <p>프로젝트</p>
+                                    <p>2021.01.01</p>
+                                </div>
+                                <div class="portfolio-card-image"></div>
+                            </div>
+                            
+                            <div class="portfolio-card">
+                                <div class="portfolio-card-opacity">
+                                    <p>프로젝트</p>
+                                    <p>2021.01.01</p>
+                                </div>
+                                <div class="portfolio-card-image"></div>
+                            </div>
+                            
+                            <div class="portfolio-card">
+                                <div class="portfolio-card-opacity">
+                                    <p>프로젝트</p>
+                                    <p>2021.01.01</p>
+                                </div>
+                                <div class="portfolio-card-image"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-table">
+                            <div class="portfolio-card">
+                                <div class="portfolio-card-opacity">
+                                    <p>프로젝트</p>
+                                    <p>2021.01.01</p>
+                                </div>
+                                <div class="portfolio-card-image"></div>
+                            </div>
+
+                            <div class="portfolio-card">
+                                <div class="portfolio-card-opacity">
+                                    <p>프로젝트</p>
+                                    <p>2021.01.01</p>
+                                </div>
+                                <div class="portfolio-card-image"></div>
+                            </div>
+                            
+                            <div class="portfolio-card">
+                                <div class="portfolio-card-opacity">
+                                    <p>프로젝트</p>
+                                    <p>2021.01.01</p>
+                                </div>
+                                <div class="portfolio-card-image"></div>
+                            </div>
+                            
+                            <div class="portfolio-card">
+                                <div class="portfolio-card-opacity">
+                                    <p>프로젝트</p>
+                                    <p>2021.01.01</p>
+                                </div>
+                                <div class="portfolio-card-image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div id="contact-page" class="page">
+                    <div id="contact">
+                        <h1>ABOUT US</h1>
+                        <div class="underline"></div>
+
+                        <p>
+                            Call : 010-xxxx-xxxx
+                            <br>
+                            <br>
+                            Address : 대한민국
+                            <br>
+                            <br>
+                            E-mail : ______@naver.com
+                        </p>
+                        
+                        <div id="send-box">
+                            <p>이름</p> <input type="text">
+                            <p>이메일</p> <input type="text">
+                            <p>메세지</p> <textarea cols="50" rows="15"></textarea>
+                            
+                            <button>전송</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        <!--</div>-->
         <script>
             $(document).ready(function(){
-                
+                var link = {
+                    'HOME': '#main-page',
+                    'ABOUT US': '#about-page',
+                    'PORTFOLIO': '#portfolio-page',
+                    'CONTACT': '#contact-page'
+                };
+                var preloader = setInterval(function() {
+                    $('#preloader').fadeOut(500);
+                }, 1800, function() {
+                   clearInterval(this);
+                });
                 
                 setInterval(function() {
                     $('#main-page-underarrow').css('visibility', 'visible');
@@ -209,6 +626,54 @@
                         $('#main-page-underarrow').css('visibility', 'hidden');
                     });
                 }, 1500);
+                
+                $('#view-wrap').on('click', function() {
+                    $("html,body").stop().animate({
+                        scrollTop:$('#main-page').outerHeight()+"px"
+                    },800);
+                });
+                
+                $(window).scroll(function(){
+                    var height = $('#main-page').outerHeight();
+                    
+                    if ($(this).scrollTop() >= height) {
+                        $('nav').css('position', 'fixed');
+                        $('nav').css('top', '0');
+                    } else {
+                        $('nav').css('position', '');
+                        $('#nav-content > ul > li:nth-child(1)').css('color', '#ada074');
+                    }
+                    
+                    if ($(this).scrollTop() < height) {
+                        $('#nav-content > ul > li').css('color', 'black');
+                        $('#nav-content > ul > li').eq(0).css('color', '#ada074');
+                    } else if ($(this).scrollTop() < 2*height-30){
+                        $('#nav-content > ul > li').css('color', 'black');
+                        $('#nav-content > ul > li').eq(1).css('color', '#ada074');
+                    } else if ($(this).scrollTop() < 3*height-30){
+                        $('#nav-content > ul > li').css('color', 'black');
+                        $('#nav-content > ul > li').eq(2).css('color', '#ada074');
+                    } else {
+                        $('#nav-content > ul > li').css('color', 'black');
+                        $('#nav-content > ul > li').eq(3).css('color', '#ada074');
+                    }
+                    
+                    if ($(this).scrollTop() >= 0.7*height) {
+                        $('.card').fadeIn(1000);
+                    }
+                    
+                    if ($(this).scrollTop() >= 1.7*height) {
+                        $('.portfolio-card').slideDown(1000);
+                    }
+                });
+                
+                $('li').on('click', function() {
+                    var go = $(link[$(this).text()]).offset().top;
+                    
+                    $("html,body").stop().animate({
+                        scrollTop: go+"px"
+                    },800);
+                });
             });
         </script>
     </body>
